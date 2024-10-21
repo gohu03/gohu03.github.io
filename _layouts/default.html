@@ -5,6 +5,11 @@
     <meta charset="utf-8">
     
     {% seo %}
+
+    <!-- components -->
+    {% for component in page.components %}
+      {% include component/{{ component }}.html %}
+    {% endfor %}
   </head>
   <body>
     {{ content }}
