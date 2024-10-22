@@ -1,0 +1,25 @@
+@use "_base";
+
+#theme-switcher{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+
+  
+}
+
+#theme-switcher:hover {
+  background-color: var(--hovered-color);
+}
+
+#theme-switcher:active {
+  background-color: var(--clicked-color);
+}
