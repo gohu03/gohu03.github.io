@@ -1,4 +1,8 @@
-@use "_base";
+@use "base";
+
+// buttons
+@use "btn/btn.scss";
+@use "btn/theme-switcher.scss";
 
 body {
   background-color: var(--primary-background-color);
