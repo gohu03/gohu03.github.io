@@ -13,10 +13,16 @@ collections:
     output: true
 defaults:
   - scope:
+      path: collections/_post
+      type: post
+    values:
+      layout: post
+  - scope:
       path: collections/_word/
       type: word
     values:
       permalink: /word/:title
+      layout: post
 
 # markdown
 markdown: CommonMarkGhPages
