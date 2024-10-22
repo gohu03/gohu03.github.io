@@ -1,13 +1,31 @@
+# seo
 title: "gohu blog"
 description: "anything"
 url: "https://blog.gohu.dev"
 author: "GOHU"
-baseurl: "/"
 
+# path
+baseurl: "/"
+permalink: /:categories/:title
+collections_dir: collections
+collections:
+  word:
+    output: true
+defaults:
+  - scope:
+      path: collections/_word/
+      type: word
+    values:
+      permalink: /word/:title
+
+# markdown
 markdown: CommonMarkGhPages
 commonmark:
   options: ["SMART", "FOOTNOTES"]
   extensions: ["strikethrough", "autolink", "table", "tagfilter"]
+sass:
+  sass_dir: _sass
+  style: compressed
 
 plugins:
   - jekyll-avatar
@@ -24,4 +42,3 @@ plugins:
   - jekyll-sitemap
   - jekyll-titles-from-headings
   - jemoji
-  
