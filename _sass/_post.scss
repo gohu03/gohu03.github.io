@@ -1,0 +1,16 @@
+@use "_base.scss";
+@use "font/NanumSquare.scss";
+
+#post {
+  font-family: 'NanumSquare';
+
+  table {
+    th {
+      text-align: center;
+      vertical-align: middle;
+      font-weight: bold;
+      color: $default-font-color;
+      background-color: #808080;
+    }
+  }
+}
