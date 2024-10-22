@@ -13,13 +13,10 @@
   right: 10px;
   bottom: 10px;
 
-  
-}
-
-#theme-switcher:hover {
-  background-color: var(--hovered-color);
-}
-
-#theme-switcher:active {
-  background-color: var(--clicked-color);
+  &:hover {
+    background-color: var(--hovered-color);
+  }
+  &:active {
+    background-color: var(--clicked-color);
+  }
 }
