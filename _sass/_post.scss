@@ -1,17 +1,35 @@
-@use "_base.scss";
-@use "font/NanumSquare.scss";
+@use "base";
 
-#post {
-  font-family: 'NanumSquare';
+.post {
+  font-family: var(--default-content-font);
 
-  table {
-    th {
-      text-align: center;
-      vertical-align: middle;
-      font-weight: bold;
-      color: var(--default-font-color);
-      background-color: #808080;
-      padding: 0.25em;
+  .post-title {
+    h1 {
+      font-weight: 800;
+      font-style: normal;
+    }
+  }
+
+  .post-content{
+    table {
+      th {
+        text-align: center;
+        vertical-align: middle;
+        font-weight: bold;
+        color: var(--default-font-color);
+        background-color: var(--table-heading-cell-color);
+      }
+
+      th, td {
+        padding: 0.25em;
+      }
+
+      &, th, td {
+        border-width: 1px;
+        border-style: solid;
+        border-color: var(--table-border-color);
+        border-collapse: collapse;
+      }
     }
   }
 }

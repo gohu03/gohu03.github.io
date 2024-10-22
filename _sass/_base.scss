@@ -13,14 +13,22 @@
     // button
     --button-hovered-color: #88a182;
     --button-clicked-color: #4d5c49;
+
+    // post
+    --table-border-color: #4d3910;
+    --table-heading-cell-color: #809e7d;
   }
 
   &[color-theme="dark"]{
     --default-font-color: #d4d4d4;
-    --primary-background-color: #061316;
+    --primary-background-color: #031212;
 
     // button
-    --button-hovered-color: #15404a;
-    --button-clicked-color: #266f80;
+    --button-hovered-color: #0D3939;
+    --button-clicked-color: #174D4D;
+
+    // post
+    --table-border-color: #b0b0b0;
+    --table-heading-cell-color: #0d3b3b;
   }
 }
