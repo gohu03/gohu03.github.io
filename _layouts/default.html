@@ -10,6 +10,9 @@
     {% for component in page.components %}
       {% include component/{{ component }}.html %}
     {% endfor %}
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css">
   </head>
   <body>
     {{ content }}
