@@ -13,8 +13,8 @@ collections:
     output: true
 defaults:
   - scope:
-      path: collections/_post
-      type: post
+      path: collections/_posts
+      type: posts
     values:
       layout: post
   - scope:
