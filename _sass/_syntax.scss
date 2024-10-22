@@ -1,0 +1,25 @@
+:root[color-theme="light"] {
+  --code-font-color: #24292f;
+  --code-background-color: #f6f8fa;
+
+  // error
+  --code-error-color: #f6f8fa;
+  --code-error-background-color: #82071e;
+
+  // keyword
+  --code-default-keyword-color: #cf222e;
+  --code-constant-keyword-color: #0550ae;
+  --code-declaration-keyword-color: #cf222e;
+  --code-namespace-keyword-color: #cf222e;
+  --code-pseudo-keyword-color: #cf222e;
+  --code-reserved-keyword-color: #cf222e;
+  --code-type-keyword-color: #cf222e;
+  --code-variable-keyword-color: #cf222e;
+
+  // name
+  --code-attribute-name-color: #116329;
+  --code-builtin-name-color: #953800;
+  --code-pseudo-builtin-name-color: #0550ae;
+  --code-class-name-color: #953800;
+}
+
