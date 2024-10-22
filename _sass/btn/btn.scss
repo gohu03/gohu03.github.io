@@ -1,0 +1,18 @@
+@use "base";
+
+.btn{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  &:hover {
+    background-color: var(--hovered-color);
+  }
+  &:active {
+    background-color: var(--clicked-color);
+  }
+}
