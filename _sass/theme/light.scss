@@ -1,0 +1,12 @@
+@mixin theme-light {
+  --default-font-color: #000000;
+  --primary-background-color: #C1DCBA;
+
+  // button
+  --button-hovered-color: #88a182;
+  --button-clicked-color: #4d5c49;
+
+  // post
+  --table-border-color: #4d3910;
+  --table-heading-cell-color: #809e7d;
+}
