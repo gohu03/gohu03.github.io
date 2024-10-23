@@ -1,4 +1,5 @@
 @use 'font/NanumSquare.scss';
+@use 'font/D2Coding.scss';
 
 // theme
 @use 'theme/light.scss' as light;
@@ -6,6 +7,7 @@
 
 :root {
   --default-content-font: 'NanumSquare';
+  --default-code-font: 'D2Coding';
 
   // button
   --button-diameter: 50px;
