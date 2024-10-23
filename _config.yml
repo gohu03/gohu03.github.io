@@ -11,17 +11,34 @@ collections_dir: collections
 collections:
   word:
     output: true
+  term:
+    output: true
+  study:
+    output: true
 defaults:
   - scope:
       path: collections/_posts
       type: posts
     values:
+      permalink: post/:categories/:title
       layout: post
   - scope:
       path: collections/_word/
       type: word
     values:
-      permalink: /word/:title
+      permalink: /word/:path
+      layout: post
+  - scope:
+      path: collections/_term/
+      type: term
+    values:
+      permalink: /term/:path
+      layout: post
+  - scope:
+      path: collections/_study/
+      type: study
+    values:
+      permalink: /study/:path
       layout: post
 
 # markdown
