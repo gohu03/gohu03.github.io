@@ -1,10 +1,9 @@
 @use "base";
 
-// buttons
-@use "btn/btn.scss";
-@use "btn/theme-switcher.scss";
+// layout
+@use "layout/dock.scss";
 
 body {
-  background-color: var(--primary-background-color);
+  background-color: var(--background-color);
   color: var(--default-font-color);
 }

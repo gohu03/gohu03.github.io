@@ -1,15 +1,27 @@
 @mixin theme-dark {
   --default-font-color: #d4d4d4;
-  --primary-background-color: #031212;
+  --background-color: #191919;
 
-  // button
-  --button-hovered-color: #0D3939;
-  --button-clicked-color: #174D4D;
+  ////////////
+  // layout //
+  ////////////
+  // dock
+  --dock-background-color: #202020;
+  --dock-border-color: #808080;
+  --dock-button-background-color: transparent;
+  --dock-hovered-color: #303030;
+  --dock-clicked-color: #404040;
+  --theme-switcher-image: url('/assets/icons/dock/dark.svg');
 
-  // post
-  --table-border-color: #b0b0b0;
-  --table-heading-cell-color: #0d3b3b;
-  --table-empty-cell-color: #444444;
-  --code-background-color: #272727;
+  //////////
+  // post //
+  //////////
+  // table
+  --table-border-color: #808080;
+  --table-heading-cell-color: #143444;
+  --table-empty-cell-color: #808080;
+
+  // code
+  --code-background-color: #202020;
   --code-font-color: #C3DF6A;
 }

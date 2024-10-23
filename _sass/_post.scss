@@ -2,9 +2,13 @@
 
 .post {
   font-family: var(--default-content-font);
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 
   .post-title {
     h1 {
+      font-size: 3rem;
       font-weight: 800;
       font-style: normal;
     }
@@ -12,6 +16,7 @@
 
   .post-content{
     h1 {
+      font-size: 1.5rem;
       margin-top: 2em;
     }
 
