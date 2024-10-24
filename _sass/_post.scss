@@ -2,6 +2,7 @@
 
 .post {
   font-family: var(--default-content-font);
+  width: 800px;
   margin-left: auto;
   margin-right: auto;
 
@@ -63,10 +64,6 @@
       margin-left: 0;
     }
   }
-}
-
-@media (min-width: 800px){
-  .post { width: 800px; }
 }
 
 @media ( max-width: 800px ){
