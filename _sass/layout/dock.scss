@@ -1,4 +1,5 @@
-@use "base";
+@use "theme";
+@use "config";
 
 // icon image
 :root[color-theme="light"]{
@@ -72,7 +73,7 @@
   }
 }
 
-@media ( min-width: 800px ) and ( max-width: 1440px ){
+@media ( min-width: #{config.$post-default-width} ) and ( max-width: 1440px ){
   .dock{
     border-width: 1px;
     border-style: solid;
@@ -93,7 +94,7 @@
   }
 }
 
-@media ( max-width: 800px ){
+@media ( max-width: #{config.$post-default-width} ){
   .dock {
     width: auto;
 

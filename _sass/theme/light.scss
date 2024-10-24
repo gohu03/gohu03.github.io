@@ -1,6 +1,10 @@
-@mixin theme-light {
+:root[color-theme="light"]{
+  $primary-color: #c1dcba;
+
+  ////////////////////////////////////////////////
+
   --default-font-color: #000000;
-  --background-color: #C1DCBA;
+  --background-color: #{$primary-color};
 
   ////////////
   // layout //

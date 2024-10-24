@@ -1,22 +1,68 @@
-@use "base";
+@use "sass:map";
+@use "theme";
+@use "config";
 
+////////////////////////////
+////////// config //////////
+////////////////////////////
+$default-border-width: 1px;
+
+$title: (
+  font: (
+    size: 3rem,
+    weight: 800
+  )
+);
+
+// content
+$font-size: (
+  h1: 1.5rem,
+  p: 1rem
+);
+
+// table
+$table: (
+  cell: (
+    padding: (
+      lr: 0.2em, // left and right
+      tb: 0.25em // top and bottom
+    )
+  )
+);
+
+// code
+$code: (
+  padding: (
+    tb: 0.1em,
+    lr: 0.5em
+  ),
+  margin: (
+    tb: 0.1em,
+    lr: 0.25em
+  ),
+  radius: 0.3em
+);
+
+
+///////////////////////////////
+///////////// css /////////////
+///////////////////////////////
 .post {
   font-family: var(--default-content-font);
-  width: 800px;
+  width: config.$post-default-width;
   margin-left: auto;
   margin-right: auto;
 
   .post-title {
     h1 {
-      font-size: 3rem;
-      font-weight: 800;
-      font-style: normal;
+      font-size: #{map.get($title, 'font', 'size')};
+      font-weight: #{map.get($title, 'font', 'weight')};
     }
   }
 
   .post-content{
     h1 {
-      font-size: 1.5rem;
+      font-size: #{map.get($font-size, 'h1')};
       margin-top: 2em;
     }
 
@@ -30,20 +76,24 @@
       }
 
       th, td {
-        padding: 0.25em;
+        padding: #{map.get($table, 'cell', 'padding', 'tb')} #{map.get($table, 'cell', 'padding', 'lr')};
       }
 
       &, th, td {
-        border-width: 1px;
+        border-width: $default-border-width;
         border-style: solid;
         border-color: var(--table-border-color);
         border-collapse: collapse;
       }
 
-      td.empty {
+      td:empty{
         text-align: center;
         vertical-align: middle;
         background-color: var(--table-empty-cell-color);
+
+        &::after{
+          content: "-";
+        }
       }
     }
     
@@ -51,21 +101,13 @@
       font-family: 'D2Coding';
       background-color: var(--code-background-color);
       color: var(--code-font-color);
-      padding-top: 0.1em;
-      padding-bottom: 0.25em;
-      padding-left: 0.5em;
-      padding-right: 0.5em;
-      margin: 0.2em;
-      border-radius: 0.3em;
-    }
-
-    li {
-      margin: 0.3em;
-      margin-left: 0;
+      padding: #{map.get($code, 'padding', 'tb')} #{map.get($code, 'padding', 'lr')};
+      margin: #{map.get($code, 'margin', 'tb')} #{map.get($code, 'padding', 'lr')};
+      border-radius: #{map.get($code, 'radius')};
     }
   }
 }
 
-@media ( max-width: 800px ){
+@media ( max-width: #{config.$post-default-width} ){
   .post { width: auto; }
 }
