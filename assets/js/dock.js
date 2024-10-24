@@ -24,12 +24,12 @@ class Dock{
   }
 
   listener = () => {
-    if( window.innerWidth < 1440 && !this.opend ) {
+    if( window.innerWidth < 1000 && !this.opend ) {
       window.addEventListener('click', this.clicked);
       window.addEventListener('scroll', this.scrolled);
       this.opend = true;
     }
-    else if (window.innerWidth > 1440 && this.opend ){
+    else if (window.innerWidth > 1000 && this.opend ){
       window.removeEventListener('click', this.clicked);
       window.removeEventListener('scroll', this.scrolled);
       this.opend = false;
