@@ -23,9 +23,10 @@
     }
   }
 
-  .theme-switcher{
-    background-image: var(--theme-switcher-image);
-  }
+  .home { background-image: var(--home-image); }
+  .theme-switcher{ background-image: var(--theme-switcher-image); }
+
+
 }
 
 @media ( min-width: 1440px ){
