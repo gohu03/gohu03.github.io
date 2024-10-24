@@ -3,7 +3,7 @@
 
 .dock {
   background-color: var(--dock-background-color);
-
+  position: fixed;
   list-style-type: none;
 
   li {
@@ -36,10 +36,9 @@
     padding: 20px 5px;
     gap: 20px;
 
-    position: fixed;
-    left: 25px;
     top: 50%;
     transform: translateY(-50%);
+    left: 25px;
 
     width: 60px;
     border-width: 1px;
@@ -49,30 +48,41 @@
   }
 }
 
-
 @media ( max-width: 1440px ){
   .dock {
-    width: 800px;
     height: 60px;
-
-    position: fixed;
-    margin-left: auto;
-    margin-right: auto;
     margin-bottom: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
 
     display: flex;
-    padding: 5px 20px;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between;;
     align-items: center;
+    padding: 5px 20px;
+  }
+}
+
+@media ( min-width: 800px ) and ( max-width: 1440px ){
+  .dock{
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--dock-border-color);
+    border-radius: 20px;
+
+    gap: 20px;
+
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
   }
 }
 
 @media ( max-width: 800px ){
   .dock {
     width: auto;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 }
+
