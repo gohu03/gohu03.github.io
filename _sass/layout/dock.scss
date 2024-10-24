@@ -1,23 +1,8 @@
 @use "base";
 
+
 .dock {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px 5px;
-  gap: 20px;
-
-  position: fixed;
-  left: 25px;
-  top: 50%;
-  transform: translateY(-50%);
-
-  width: 60px;
   background-color: var(--dock-background-color);
-  border-width: 1px;
-  border-style: solid;
-  border-color: var(--dock-border-color);
-  border-radius: 25px;
 
   list-style-type: none;
 
@@ -40,5 +25,54 @@
 
   .theme-switcher{
     background-image: var(--theme-switcher-image);
+  }
+}
+
+@media ( min-width: 1440px ){
+  .dock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 5px;
+    gap: 20px;
+
+    position: fixed;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 60px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--dock-border-color);
+    border-radius: 20px;
+  }
+}
+
+
+@media ( max-width: 1440px ){
+  .dock {
+    width: 800px;
+    height: 60px;
+
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    padding: 5px 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media ( max-width: 800px ){
+  .dock {
+    width: auto;
   }
 }
