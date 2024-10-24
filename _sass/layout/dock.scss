@@ -1,5 +1,15 @@
 @use "base";
 
+// icon image
+:root[color-theme="light"]{
+  --home-image: url('/assets/icons/dock/home.svg');
+  --theme-switcher-image: url('/assets/icons/dock/light.svg');
+}
+
+:root[color-theme="dark"]{
+  --home-image: url('/assets/icons/dock/home-fill.svg');
+  --theme-switcher-image: url('/assets/icons/dock/dark.svg');
+}
 
 .dock {
   background-color: var(--dock-background-color);
