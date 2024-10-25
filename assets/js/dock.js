@@ -40,3 +40,7 @@ class Dock{
 const $dock = new Dock();
 $dock.listener();
 window.addEventListener('resize', $dock.listener);
+
+$dock.e.addEventListener('click', (e) => {
+  e.stopPropagation();
+})
